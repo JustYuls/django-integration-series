@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ room.name }} | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>{{ room.name }}</h1>
+  <p>Capacity: {{ room.capacity }}. Projector: {{ room.has_projector|yesno:"yes,no" }}.</p>
+  <h2>Bookings</h2>
+  <ul>
+    {% for booking in bookings %}
+      <li>{{ booking.start|date:"M j, g:i A" }} to {{ booking.end|date:"g:i A" }}: {{ booking.booked_by }}{% if booking.purpose %} ({{ booking.purpose }}){% endif %}</li>
+    {% empty %}
+      <li>No bookings yet.</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{% url 'bookings:room_list' %}">Back to all rooms</a></p>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Rooms | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>Rooms</h1>
+  <p><a href="{% url 'bookings:room_create' %}">Add a room</a></p>
+  <ul>
+    {% for room in rooms %}
+      <li>
+        <a href="{% url 'bookings:room_detail' room.id %}">{{ room.name }}</a>
+        ({{ room.capacity }} seat{{ room.capacity|pluralize }}){% if room.has_projector %}, projector{% endif %},
+        {{ room.booking_count }} booking{{ room.booking_count|pluralize }}
+        <a href="{% url 'bookings:room_update' room.id %}">edit</a>
+        <a href="{% url 'bookings:room_delete' room.id %}">delete</a>
+      </li>
+    {% empty %}
+      <li>No rooms yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
