@@ -1,0 +1,15 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Campus Booking Hub{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body>
+  {% include "partials/_navbar.html" %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {% include "partials/_footer.html" %}
+</body>
+</html>

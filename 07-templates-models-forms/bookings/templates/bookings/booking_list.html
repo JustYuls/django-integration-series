@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Bookings | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>Bookings</h1>
+  <table>
+    {% for booking in bookings %}
+      <tr>
+        <td>{{ booking.room.name }}</td>
+        <td>{{ booking.start|date:"M j, g:i A" }}</td>
+        <td>{{ booking.booked_by }}</td>
+        <td>{{ booking.purpose|default:"-" }}</td>
+      </tr>
+    {% empty %}
+      <tr><td>No bookings yet.</td></tr>
+    {% endfor %}
+  </table>
+{% endblock %}
