@@ -149,6 +149,7 @@ Every part: goal, LO, what the viewer builds, key concepts, one common mistake, 
 - YouTube kit: title, description, tags, chapters, pinned comment, setup sheet
 - Code folder `01-...` to `12-...` with tests and README (Parts 1 to 3 are scripts; 4 to 12 are the growing Django project)
 - 1 to 2 Shorts per part
+- **Quiz:** 4 or 5 multiple-choice questions per part (`quiz.md` in each kit). From Part 5 on, the video ends with a "Check yourself" slide with 3 of them. The course ends with a final quiz covering CO1 to CO4 (`kits\final-course-quiz.md`, extended as each part is built)
 
 Plus series playlist, GitHub README, upload checklist, and schedule.
 

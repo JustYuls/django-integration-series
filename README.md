@@ -22,7 +22,8 @@ Each part has a folder with code and tests. Parts 1 to 3 are standalone scripts.
 | 2 | [`02-client-server`](02-client-server) | LO 1.2 Client-server and HTTP | Done |
 | 3 | [`03-apis`](03-apis) | LO 1.3 Choosing the right API and language | Done |
 | 4 | [`04-first-project`](04-first-project) | LO 2.1 Install and start your first Django project | Done |
-| 5 to 12 | see [SERIES_PLAN.md](SERIES_PLAN.md) | LO 2.2 to 4.3 | Planned |
+| 5 | [`05-apps-and-structure`](05-apps-and-structure) | LO 2.2 and 2.4 Apps, templates, static files, AI structure review | Done |
+| 6 to 12 | see [SERIES_PLAN.md](SERIES_PLAN.md) | LO 2.3 to 4.3 | Planned |
 
 CO1 (Parts 1 to 3) is complete.
 
