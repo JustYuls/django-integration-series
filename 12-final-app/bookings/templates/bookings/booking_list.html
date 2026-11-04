@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Bookings | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>Bookings</h1>
+  <form method="get">
+    <select name="room">
+      <option value="">All rooms</option>
+      {% for room in rooms %}
+        <option value="{{ room.id }}"{% if selected_room == room.id|stringformat:"s" %} selected{% endif %}>{{ room.name }}</option>
+      {% endfor %}
+    </select>
+    <input type="search" name="q" value="{{ q }}" placeholder="Search purpose or name">
+    <button type="submit">Filter</button>
+  </form>
+  <table>
+    {% for booking in page %}
+      <tr>
+        <td>{{ booking.room.name }}</td>
+        <td>{{ booking.start|date:"M j, g:i A" }}</td>
+        <td>{{ booking.booked_by }}</td>
+        <td>{{ booking.purpose|default:"-" }}</td>
+        <td><a href="{% url 'bookings:booking_update' booking.pk %}">edit</a> <a href="{% url 'bookings:booking_delete' booking.pk %}">delete</a></td>
+      </tr>
+    {% empty %}
+      <tr><td>No bookings found.</td></tr>
+    {% endfor %}
+  </table>
+  <p>
+    {% if page.has_previous %}<a href="?page={{ page.previous_page_number }}&room={{ selected_room }}&q={{ q|urlencode }}">Previous</a>{% endif %}
+    Page {{ page.number }} of {{ page.paginator.num_pages }}
+    {% if page.has_next %}<a href="?page={{ page.next_page_number }}&room={{ selected_room }}&q={{ q|urlencode }}">Next</a>{% endif %}
+  </p>
+{% endblock %}

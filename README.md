@@ -24,9 +24,14 @@ Each part has a folder with code and tests. Parts 1 to 3 are standalone scripts.
 | 4 | [`04-first-project`](04-first-project) | LO 2.1 Install and start your first Django project | Done |
 | 5 | [`05-apps-and-structure`](05-apps-and-structure) | LO 2.2 and 2.4 Apps, templates, static files, AI structure review | Done |
 | 6 | [`06-views-and-routing`](06-views-and-routing) | LO 2.3 Views and URL routing | Done |
-| 7 to 12 | see [SERIES_PLAN.md](SERIES_PLAN.md) | LO 3.1 to 4.3 | Planned |
+| 7 | [`07-templates-models-forms`](07-templates-models-forms) | LO 3.1 Templates, models, and forms | Done |
+| 8 | [`08-database-and-crud`](08-database-and-crud) | LO 3.2 Database and CRUD | Done |
+| 9 | [`09-api-integration`](09-api-integration) | LO 3.3 and 3.4 Consuming an external API, AI-assisted tests | Done |
+| 10 | [`10-modular-design`](10-modular-design) | LO 4.1 Design the complete application | Done |
+| 11 | [`11-security`](11-security) | LO 4.2 Authentication, permissions, and security | Done |
+| 12 | [`12-final-app`](12-final-app) | LO 4.3 Debugging, optimizing, and presenting the final app | Done |
 
-CO1 (Parts 1 to 3) and CO2 (Parts 4 to 6) are complete.
+All four course outcomes are covered. `12-final-app` is the finished Campus Booking Hub (98 tests); read its `docs/DECISIONS.md` and `docs/PRESENTATION.md`.
 
 ## What you need
 

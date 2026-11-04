@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Find a room | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>Find a free room</h1>
+  <form method="get">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+  {% if rooms is not None %}
+    <h2>Free rooms</h2>
+    <ul>
+      {% for room in rooms %}
+        <li>{{ room.name }} ({{ room.capacity }} seat{{ room.capacity|pluralize }}){% if room.has_projector %}, projector{% endif %}</li>
+      {% empty %}
+        <li>No room is free for that time. Try another time.</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

@@ -135,6 +135,7 @@ Every part: goal, LO, what the viewer builds, key concepts, one common mistake, 
 - AI-assisted debugging on a planted bug, error analysis, refactor, a performance fix with measured results, justifying design/security/performance decisions, how to present the project.
 - CO4 recap and a full course recap of CO1 to CO4.
 - Mistake: accepting AI-generated code without reading it.
+- As built: a "Find a room" page with one `Exists()` query; a bug report (multi-valued `exclude()`) reproduced, fixed and locked with tests; a measurement on 100,000 bookings (N+1, one query, one query with a composite index); `seed_demo`; `docs/DECISIONS.md` and `docs/PRESENTATION.md`. LO 4.3 in the syllabus reads "Debug and refine code using AI-assisted suggestions and code reviews".
 
 ## Scope boundaries
 

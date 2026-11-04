@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Delete booking | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>Delete this booking?</h1>
+  <p>{{ booking.room.name }}, {{ booking.start|date:"M j, g:i A" }}, {{ booking.booked_by }}</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+    <a href="{% url 'bookings:booking_list' %}">Cancel</a>
+  </form>
+{% endblock %}

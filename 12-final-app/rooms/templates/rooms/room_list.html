@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Rooms | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>Rooms</h1>
+  {% if perms.rooms.add_room %}<p><a href="{% url 'rooms:room_create' %}">Add a room</a></p>{% endif %}
+  <ul>
+    {% for room in rooms %}
+      <li>
+        <a href="{% url 'rooms:room_detail' room.pk %}">{{ room.name }}</a>
+        ({{ room.capacity }} seat{{ room.capacity|pluralize }}){% if room.has_projector %}, projector{% endif %}
+        {% if perms.rooms.change_room %}<a href="{% url 'rooms:room_update' room.pk %}">edit</a>{% endif %}
+        {% if perms.rooms.delete_room %}<a href="{% url 'rooms:room_delete' room.pk %}">delete</a>{% endif %}
+      </li>
+    {% empty %}
+      <li>No rooms yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
