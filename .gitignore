@@ -1,0 +1,11 @@
+﻿__pycache__/
+*.pyc
+.venv/
+venv/
+*.sqlite3
+db.sqlite3
+.env
+
+# video production files stay out of the code repo
+videos/
+kits/
