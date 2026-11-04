@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Holidays {{ year }} | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>Public holidays {{ year }}</h1>
+  {% if error %}
+    <p class="message">The holidays service is not available right now. Bookings still work. Please try again later.</p>
+  {% else %}
+    <ul>
+      {% for holiday in holidays %}
+        <li>{{ holiday.date|date:"D, M j" }}: {{ holiday.name }}</li>
+      {% empty %}
+        <li>No holidays listed.</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

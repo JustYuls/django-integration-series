@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.name }} | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>{{ object.name }}</h1>
+  <p>Capacity: {{ object.capacity }}. Projector: {{ object.has_projector|yesno:"yes,no" }}.</p>
+  <p><a href="{% url 'rooms:room_list' %}">Back to all rooms</a></p>
+{% endblock %}

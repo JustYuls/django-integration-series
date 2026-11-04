@@ -1,0 +1,5 @@
+body { font-family: system-ui, sans-serif; margin: 0; color: #1e293b; }
+.navbar { display: flex; gap: 1.5rem; align-items: center; padding: 1rem 2rem; background: #0f172a; color: #e2e8f0; }
+.navbar a { color: #38bdf8; text-decoration: none; }
+main { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+.footer { text-align: center; padding: 1.5rem; color: #64748b; }

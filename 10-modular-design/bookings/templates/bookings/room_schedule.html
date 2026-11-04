@@ -1,0 +1,15 @@
+﻿{% extends "base.html" %}
+
+{% block title %}{{ room.name }} schedule | Campus Booking Hub{% endblock %}
+
+{% block content %}
+  <h1>{{ room.name }}: upcoming bookings</h1>
+  <ul>
+    {% for booking in bookings %}
+      <li>{{ booking.start|date:"M j, g:i A" }} to {{ booking.end|date:"g:i A" }}: {{ booking.booked_by }}</li>
+    {% empty %}
+      <li>No upcoming bookings.</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{% url 'rooms:room_detail' room.pk %}">Back to the room</a></p>
+{% endblock %}
